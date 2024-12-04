@@ -5,7 +5,7 @@ name = 'abcdefg'
 print(name[0])  # a
 
 # 2、查找固定字符串索引位置
-print(name.index('b')) # 1
+print(name.index('b'))  # 1
 
 # 3、指定字符串替换 字符串.replace(字符串1，字符串2)
 new_name = name.replace('b', 'i')

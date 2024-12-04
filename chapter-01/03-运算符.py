@@ -20,10 +20,10 @@
 
 # 5、三目运算符
 a = b = 1
-max = 0
+max1 = 0
 if a > b:
-    max = a
+    max1 = a
 else:
-    max = b
+    max1 = b
 
 # 可以简写 max = a if a > b else b
