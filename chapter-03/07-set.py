@@ -23,7 +23,6 @@ set1 = {1, 2, 3}
 set2 = {1, 4, 5}
 set3 = set1.difference(set2)
 print(set3)
-
 # 6、消除两个集合的差别 集合1.difference_update(集合2)  对比集合1和集合2，在集合1内，删除和集合2相同的元素  会改变原始数据
 set4 = {1, 2, 3}
 set5 = {1, 4, 5}
