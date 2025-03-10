@@ -8,6 +8,7 @@ print(int('123'), type(int('123')))
 print(float('123'))
 print(float(123))
 print(float(True))
+# print(float('a'))  会报错
 
 # str（x)  将x转换为str类型 一般所有的数据类型都能转换为str类型
 print('-----------------str转化数据类型-------------------------')
