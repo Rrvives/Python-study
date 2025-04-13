@@ -16,7 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from user import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    # 基础页面
+    path('index/', views.index),
+
+    # 模板页面
+    path('user/', views.user_index),
+
+    # 模板带参数
+    path('template/', views.template),
+
+    # 请求与响应
+    path('req/', views.something),
+
+    path('login/', views.login),
+
+    path('orm/', views.orm)
 ]

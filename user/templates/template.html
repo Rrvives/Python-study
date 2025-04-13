@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>模板语法说明</h1>
+<h2>基础类型</h2>
+<div>基础变量：{{ name }}</div>
+<hr/>
+<h2>列表list</h2>
+<div>列表： {{ data }}</div>
+<div>可以根据下表去直接取：{{ data.0 }}</div>
+<div>
+    <div>列表的循环展示</div>
+    {% for item in data %}
+    <div>{{ item }}</div>
+    {% endfor %}
+</div>
+<hr/>
+<h2>字典dict</h2>
+<div>字典：{{ dictData }}</div>
+<div>直接取属性：{{ dictData.name }}</div>
+<div>
+    <div>字典的循环展示</div>
+    <span>注意这里的.items是字典的方法，所以要使用.items</span>
+    {% for k,v in dictData.items %}
+        <div>key值：{{ k }}, value值: {{ v }}</div>
+    {% endfor %}
+</div>
+<hr/>
+<h1>if语句</h1>
+{% if name == 'zhangsan' %}
+<div>zhangsan</div>
+{% else %}
+<div>{{ name }}</div>
+{% endif %}
+</body>
+
+</html>
