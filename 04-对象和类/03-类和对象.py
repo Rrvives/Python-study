@@ -4,6 +4,7 @@ class Student:
     name = '测试'
     age = 18
 
+    # @staticmethod   这个是装饰器  表示静态方法  只能Student自身去调用 不能使用当前类的实例去调用
     def test(self):
         print('test')
 
