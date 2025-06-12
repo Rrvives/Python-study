@@ -2,7 +2,7 @@ from django.db import models
 
 
 # 必须继承models.Model这个类
-class Test(models.Model):
+class Tests(models.Model):
     # 下面都是创建字段
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
+    'car.apps.CarConfig',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ WSGI_APPLICATION = 'Python_study.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',  # 自动去连接mysql
-    'NAME':'python_study',                 # 数据库名称
+    'NAME':'new_guozhixiong_db',                 # 数据库名称
     'USER': 'root',                        # 数据库用户名
     'PASSWORD': 'Guoyu@657',               # 数据库密码
     'HOST': '127.0.0.1',                   # 数据库地址
