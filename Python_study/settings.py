@@ -31,23 +31,44 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 解决跨域的问题
+    # 'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'car.apps.CarConfig',
+    'rest_framework',
+    'rest_framework_jwt',
+    'user.apps.UserConfig',
+    'menu.apps.MenuConfig',
+    'role.apps.RoleConfig'
 ]
 
 MIDDLEWARE = [
+    # 这是一个中间件
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+# 支持所有的用户
+CORS_ORIGIN_ALLOW_ALL = True
+# 可以不携带token
+CORS_ALLOW_CREDENTIALS = True
+# 支持的请求方法
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 ]
 
 ROOT_URLCONF = 'Python_study.urls'
@@ -84,7 +105,7 @@ WSGI_APPLICATION = 'Python_study.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',  # 自动去连接mysql
-    'NAME':'new_guozhixiong_db',                 # 数据库名称
+    'NAME':'admin',                 # 数据库名称
     'USER': 'root',                        # 数据库用户名
     'PASSWORD': 'Guoyu@657',               # 数据库密码
     'HOST': '127.0.0.1',                   # 数据库地址
