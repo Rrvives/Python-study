@@ -1,6 +1,6 @@
 # myapp/serializers.py
 from rest_framework import serializers
-from car.models import vehicle_info, vehicle_type_tab, vehicle_accessory_tab
+from apps.car.models import vehicle_info, vehicle_accessory_tab
 
 class VehicleAccessorySerializer(serializers.ModelSerializer):
     class Meta:

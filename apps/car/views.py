@@ -1,13 +1,13 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import generics, filters, status
+from rest_framework import generics, status
 from rest_framework.parsers import JSONParser
 from django.db import transaction
 from django.db.models import F
 from django.db.models import Count, Sum, FloatField
 from django.db.models.functions import Coalesce
 from django.db.models import OuterRef, Subquery
-from car.models import vehicle_info, vehicle_type_tab, vehicle_accessory_tab
+from apps.car.models import vehicle_info, vehicle_type_tab, vehicle_accessory_tab
 from .serializers import VehicleInfoSerializer
 from .pagination import VehiclePagination
 
