@@ -45,7 +45,7 @@ class VehicleListView(generics.ListAPIView):
     serializer_class = VehicleInfoSerializer
     pagination_class = VehiclePagination
 
-    def get_queryset(self):
+    def get(self, request, *args, **kwargs):
         queryset = vehicle_info.objects.all()
         params = self.request.query_params
 
@@ -74,7 +74,7 @@ class VehicleListView(generics.ListAPIView):
             totalAccessoryPrice=Coalesce(Sum('accessories__price', output_field=FloatField()), 0.0)
         )
 
-        return queryset
+        return Response({'data': list(queryset.values())}, status=status.HTTP_200_OK)
 
 # 更新指定的字段
 class UpdateVehiclePricesView(APIView):
