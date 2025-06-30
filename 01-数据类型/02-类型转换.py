@@ -14,7 +14,10 @@ print(float(True))
 print('-----------------str转化数据类型-------------------------')
 print(str(123))
 print(str([1, 2, 3, 4]))
+a = str([1,2,3])
+print(a, type(a))
 print(str(True))
+
 # 下面的这几个针对不要的业务在去验证
 
 # complex(real，[,imag]） 该操作比较少，用于创建一个复数
