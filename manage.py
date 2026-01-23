@@ -6,6 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # 与项目包名 Python_study 一致（避免与历史 config.settings 冲突）
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Python_study.settings')
     try:
         from django.core.management import execute_from_command_line
