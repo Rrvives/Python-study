@@ -1,0 +1,5 @@
+export { createAppRouter } from '@/router/createAppRouter'
+export { buildRouteTree } from '@/router/buildRouteTree'
+export { mergeDashboardMenu } from '@/router/mergeDashboardMenu'
+export { lazyComponentFromKey, routeModuleLoaders } from '@/router/routeRegistry'
+export { ROUTE_PATHS, childRoutePath, type RoutePath } from '@/constants/routes'
